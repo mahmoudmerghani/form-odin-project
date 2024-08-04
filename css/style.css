@@ -1,0 +1,116 @@
+@font-face {
+    font-family: "norse-bold";
+    src: url("../fonts/Norse-Bold.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+:root {
+    --body-clr: #f9fafb;
+    --accent-clr: #596d48;
+    --input-border-clr: #e5e7eb;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: var(--body-clr);
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+}
+.sidebar {
+    background-image: url("../images/background.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex: 1;
+}
+.form-container {
+    flex: 2;
+    padding: 4em 2em;
+
+}
+.logo {
+    background-color: rgb(0, 0, 0, 0.5);
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 25vh;
+    padding: 10px;
+}
+img {
+    height: 1em;
+    width: auto;
+}
+.logo h1 {
+    font-family: "norse-bold";
+    color: white;
+    font-size: 1em;
+    margin: 0;
+}
+.form-container p:nth-of-type(3) {
+    margin-bottom: 2em;
+}
+form {
+    background-color: white;
+    padding: 1em 2em;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 0.2);
+    margin-bottom: 2em;
+}
+form h3 {
+    margin-bottom: 1em;
+}
+label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    display: block;
+}
+input {
+    padding: 5px;
+    font-size: 1em;
+    /* max-width: 300px; */
+    width: 100%;
+    margin-bottom: 1.2rem;
+    border: 2px solid var(--input-border-clr);
+}
+input:focus {
+    outline: none;
+    border-color: rgba(0, 0, 255, 0.3);
+    box-shadow: 5px 5px 20px -5px rgb(0, 0, 0, 0.2);
+}
+input:invalid {
+    border-color: red;
+}
+.form-inputs {
+    display: flex;
+    gap: 50px;
+}
+.input-group-left,
+.input-group-right {
+    flex-basis: 300px;
+}
+button[type="submit"] {
+    background-color: var(--accent-clr);
+    color: white;
+    padding: 1em 2em;
+    border: none;
+    border-radius: 0.5em;
+    font: inherit;
+    margin-left: 2em;
+    cursor: pointer;
+    margin-bottom: 2em;
+}
+.log-in {
+    margin-left: 2em;
+}
+.log-in a {
+    color: var(--accent-clr);
+    text-decoration: none;
+}
