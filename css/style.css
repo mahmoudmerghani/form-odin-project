@@ -76,17 +76,22 @@ label {
 input {
     padding: 5px;
     font-size: 1em;
-    /* max-width: 300px; */
     width: 100%;
-    margin-bottom: 1.2rem;
-    border: 2px solid var(--input-border-clr);
+    margin-bottom: 5px;
+    border: 3px solid var(--input-border-clr);
 }
+
+div:has(> input) {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
 input:focus {
     outline: none;
     border-color: rgba(0, 0, 255, 0.3);
     box-shadow: 5px 5px 20px -5px rgb(0, 0, 0, 0.2);
 }
-input:invalid {
+input.touched:invalid {
     border-color: red;
 }
 .form-inputs {
@@ -114,4 +119,11 @@ button[type="submit"] {
 .log-in a {
     color: var(--accent-clr);
     text-decoration: none;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    position: absolute;
+    width: 100%;
 }
